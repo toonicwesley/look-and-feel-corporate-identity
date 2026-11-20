@@ -155,7 +155,7 @@
 body{
     margin: 0;
     padding: 0;
-    color: var(--text-default-bomba-darkmode);
+    color: var(--text-default-bomba);
     background-color: var(--site-background);
     font-family: "TASA Orbiter", sans-serif;
 
