@@ -1,3 +1,89 @@
+:root{
+  /* color-scheme background */
+      --site-background: hsl(0, 0%, 95%);
+      --footer-background: hsl(0, 0%, 100%);
+      --rainbowbtn-background: hsl(0 0% 90%);
+
+      /* color-scheme background darkmode */
+      --site-background-darkmode: hsl(from var(--site-background) h calc(s + 3) calc(l - 70));
+      --footer-background-darkmode: hsl(from var(--footer-background) h calc(s + 4) calc(l - 78));
+      --rainbowbtn-background-darkmode: hsl(from var(--rainbowbtn-background) h calc(s + 4) calc(l - 68));
+
+      /* color-scheme icons set */
+      --icon-light: hsl(0, 0%, 100%);
+      --icon-medium: hsl(0, 0%, 66%);
+      --icon-dark: hsl(0, 3%, 19%);
+
+      --icon-light-blue:hsl(202, 50%, 57%);
+      --icon-light-green: hsl(168, 36%, 53%);
+      --icon-light-pink: hsl(324, 53%, 50%);
+
+      --icon-dark-blue:hsl(202, 37%, 38%);
+      --icon-dark-green: hsl(168, 32%, 24%);
+      --icon-dark-pink: hsl(324, 52%, 22%);
+
+      --background-pink:hsl(322, 64%, 55%); 
+      --background-green:hsl(168, 46%, 59%);
+      --background-blue: hsl(202, 65%, 64%);
+
+      --background-pink-light: hsl(324, 63%, 82%);
+      --background-green-light: hsl(168, 39%, 84%);
+      --background-blue-light: hsl(201, 65%, 67%);
+      
+      --card-border: hsl(0, 0%, 85%);
+
+      /* color-scheme icons set darkmode */
+      --icon-light-darkmode: hsl(from var(--icon-light) h calc(s + 1) calc(l - 40));
+      --icon-medium-darkmode: hsl(from var(--icon-medium) h calc(s + 2) calc(l - 50));
+      --icon-dark-darkmode: hsl(from var(--icon-dark) h calc(s - 3) calc(l + 76));
+
+      --icon-light-blue-darkmode: hsl(from var(--icon-light-blue) h calc(s - 13) calc(l - 19));
+      --icon-light-green-darkmode: hsl(from var(--icon-light-green)h calc(s - 4) calc(l - 20));
+      --icon-light-pink-darkmode: hsl(from var(--icon-light-pink)h calc(s - 1) calc(l - 6));
+
+      --icon-dark-blue-darkmode: hsl(from var(--icon-dark-blue)h calc(s + 28) calc(l + 25));
+      --icon-dark-green-darkmode: hsl(from var(--icon-dark-green)h calc(s + 7) calc(l + 60));
+      --icon-dark-pink-darkmode: hsl(from var(--icon-dark-pink)h calc(s + 1) calc(l + 28));
+
+      --background-pink-darkmode:hsl(from var(--background-pink)h calc(s - 32) calc(l - 20));
+      --background-green-darkmode: hsl(from var(--background-green)h calc(s - 14) calc(l - 29));
+      --background-blue-darkmode: hsl(from var(--background-blue)h calc(s - 28) calc(l - 26));
+
+      --background-pink-light-darkmode: hsl(from var(--background-pink-light)h calc(s - 13) calc(l - 45));
+      --background-green-light-darkmode: hsl(from var(--background-green-light)h calc(s - 7) calc(l - 60));
+      --background-blue-light-darkmode: hsl(from var(--background-blue-light)h calc(s - 15) calc(l - 10));
+      
+      --card-border-darkmode: light-dark(var(--card-border)h calc(s + 3) calc(l -62));
+
+      /* color-scheme set rainbow buttons*/
+      --button-rainbow-green:hsl(168 47% 84%);
+      --button-rainbow-pink: hsl(322 65% 82%);
+      --button-rainbow-blue: hsl(201 65% 85%);
+
+      /* color-scheme set rainbow buttons darkmode*/
+      --button-rainbow-green-darkmode:hsl(from var(--button-rainbow-green) h s calc(l - 50));
+      --button-rainbow-pink-darkmode:hsl(from var(--button-rainbow-pink) h s calc(l - 50));
+      --button-rainbow-blue-darkmode:hsl(from var(--button-rainbow-blue) h s calc(l - 50));
+
+      /* color-scheme set hover */
+      --button-hover-shadow: hsl(0, 0%, 76%) ;
+      
+
+      /* color-scheme set hover darkmode */
+      --button-hover-shadow-darkmode: hsl(var(--button-hover-shadow)h s calc(l - 57));
+
+      /* Kleuren typografie */
+      --text-default-bomba: hsl(0, 3%, 19%); 
+      --text-green: hsl(168, 32%, 24%); 
+      --text-blue: hsl(201, 37%, 25%);
+      --text-pink: hsl(324, 52%, 22%);
+
+      /* Kleuren typografie darkmode */
+      --text-default-bomba-darkmode: hsl(from var(--text-default-bomba)h calc(s - 3) calc(l - 76)); 
+      --text-green-darkmode:  var(--text-green); 
+      --text-blue-darkmode: var(--text-blue);
+      --text-pink-darkmode: var(--text-pink);  
+}
 
 .sidenav{
     padding: 0;
@@ -27,7 +113,7 @@
     position: relative;
     display: flex;
     text-decoration: none;
-    color: #322F2F;
+    color: var(--icon-dark);
     justify-content: center;
     white-space: nowrap;
     align-items: center;
@@ -69,8 +155,8 @@
 body{
     margin: 0;
     padding: 0;
-    color: #322F2F;
-    background-color: #F2F2F2;
+    color: var(--icon-dark);
+    background-color: var(--site-background);
     font-family: "TASA Orbiter", sans-serif;
 
     @media(min-width: 900px){
@@ -87,7 +173,7 @@ header{
     height: 5em;
     position: sticky;
     top: 0;
-    background-color: #F2F2F2;
+    background-color:var(--site-background) ;
     z-index: 2;
     transition: 0.3s;
     text-align: center;
@@ -95,7 +181,7 @@ header{
     @media(min-width: 900px){
         height: 100%;
         width: 100%;
-        background-color: white;
+        background-color: var(--footer-background);
         p{
             display: none;
     }
@@ -117,14 +203,14 @@ header{
     text-align: right;
     width: 100%;
     height: 200%;
-    background-color: #F2F2F2;
+    background-color:var(--site-background) ;
     border-radius: 0 0 1rem 1rem;
     padding-bottom: 10%;
     transition: 0.3s;
 }
 .dropdownnav a{
     text-decoration: none;
-    color: #322F2F;
+    color: var(--icon-dark);
     
 }
 
@@ -193,7 +279,7 @@ h1 {
     @media(min-width: 900px){
         grid-template-columns: 1 fr 1fr 1fr;
         grid-template-rows: 1fr;
-        background-color: #E6E6E6;
+        background-color: var(--rainbowbtn-background);
         border-radius: 1rem;
         gap: 30%;
         padding: 3% 20% 3% 20%;
@@ -207,7 +293,7 @@ h1 {
     height: 7em;
     border: 0;
     border-bottom: 3px solid #BABABA;
-    color: #645A61;
+    color: var(--icon-dark);
     font-weight: normal;
     font-size: 1.2rem;
     @media(min-width: 900px){
@@ -224,19 +310,19 @@ cursor: pointer;
 .rainbowbuttons button:nth-of-type(1){
     grid-column: 1;
     grid-row: 1;
-    background-color: #EFB4D9;
+    background-color:var(--button-rainbow-pink) ;
 }
 
 .rainbowbuttons button:nth-of-type(2){
     grid-column: 2;
     grid-row: 1;
-    background-color: #C2E9E1;
+    background-color:var(--button-rainbow-green) ;
 }
 
 .rainbowbuttons button:nth-of-type(3){
     grid-column: 1 / 3;
     grid-row: 2;
-    background-color: #C2E1F2;
+    background-color:var(--button-rainbow-blue) ;
     @media(min-width: 900px){
         grid-column: 3;
         grid-row: 1;
@@ -256,8 +342,8 @@ section{
     border-radius: 0.5rem;
 }
 #refresh:hover {
-    background-color: #322F2F;
-    color: white;
+    background-color: var(--icon-dark);
+    color: var(--icon-light);
     border: transparent;
 }
 
@@ -287,7 +373,7 @@ section{
     grid-template-columns: 79% 9% 9%;
     grid-template-rows: 20% 10% 1fr 20%;
     gap: 3%;
-    background-color: white;
+    background-color: var(--footer-background);
     border-radius: 10%;
     width: 100%;
     min-height: 250px;
@@ -329,7 +415,7 @@ section{
     border-radius: 2rem;
     height: 80%;
     width: 70%;
-    background-color: white;
+    background-color: var(--site-background);
     border: 3px solid #BABABA;
     cursor: pointer;
 }
@@ -349,8 +435,8 @@ border-radius: 0.5rem;
 }
 
 .scroll-grid svg:hover{
-background-color: #322F2F;
-color: white;
+background-color: var(--icon-dark);
+color:var(--icon-light) ;
 }
 
 footer{
@@ -358,7 +444,7 @@ footer{
     bottom: 0;
     width: 100%;
     height: 5em;
-    background-color: white;
+    background-color: var(--footer-background);
     align-content: center;
     z-index: 1;
     @media(min-width: 900px){
@@ -382,11 +468,11 @@ footer{
 }
 
 .phone a:hover{
-background-color: #322F2F;
-color: white;
+background-color: var(--icon-dark);
+color: var(--icon-light);
 }
 
 .phone a:nth-of-type(1){
-    background-color: #322F2F;
+    background-color: var(--icon-dark);
 }
 
