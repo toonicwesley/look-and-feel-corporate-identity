@@ -287,7 +287,7 @@ h1 {
     }
 }
 
-.rainbowbuttons button{
+.rainbowbuttons a{
     border-radius: 1rem;
     width: auto;
     height: 7em;
@@ -296,30 +296,33 @@ h1 {
     color: var(--text-default-bomba);
     font-weight: normal;
     font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
     @media(min-width: 900px){
         font-size: 1rem;
     width: 180%;
     }
 }
 
-.rainbowbuttons button:hover{
+.rainbowbuttons a:hover{
 border: 0;
 cursor: pointer;
 }
 
-.rainbowbuttons button:nth-of-type(1){
+.rainbowbuttons a:nth-of-type(1){
     grid-column: 1;
     grid-row: 1;
     background-color:var(--button-rainbow-pink) ;
 }
 
-.rainbowbuttons button:nth-of-type(2){
+.rainbowbuttons a:nth-of-type(2){
     grid-column: 2;
     grid-row: 1;
     background-color:var(--button-rainbow-green) ;
 }
 
-.rainbowbuttons button:nth-of-type(3){
+.rainbowbuttons a:nth-of-type(3){
     grid-column: 1 / 3;
     grid-row: 2;
     background-color:var(--button-rainbow-blue) ;
@@ -476,3 +479,73 @@ color: var(--icon-light);
     background-color: var(--icon-dark);
 }
 
+
+/* Events page */
+
+.scroll-grid-events ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    scrollbar-width: none;
+}
+
+.scroll-grid-events li:nth-of-type(even){
+    flex-shrink: 0;
+    position: relative;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 79% 9% 9%;
+    grid-template-rows: 20% 10% 1fr 20%;
+    gap: 3%;
+    background-color: var(--footer-background);
+    border-radius: 10%;
+    width: 100%;
+    min-height: 250px;
+    max-width: 320px;
+    cursor: pointer;
+}
+.scroll-grid-events h3{
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    margin: 0;
+}
+
+.scroll-grid-events em{
+    position: relative;
+    top: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    bottom: 0;
+}
+
+.scroll-grid-events .bookmark{
+    grid-column: 2;
+}
+
+.scroll-grid-events .menu{
+    grid-column: 3;
+}
+.scroll-grid-events p{
+    grid-column: 1 / -1;
+    padding-right: 10%;
+    grid-row: 2;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.scroll-grid-events button{
+    grid-column: 1;
+    grid-row: 4;
+    border-radius: 2rem;
+    height: 80%;
+    width: 70%;
+    background-color: var(--site-background);
+    border: 3px solid #BABABA;
+    cursor: pointer;
+}
+.scroll-grid-events svg:hover{
+background-color: var(--icon-dark);
+color:var(--icon-light) ;
+}
